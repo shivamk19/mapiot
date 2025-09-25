@@ -1,10 +1,19 @@
-export default {
+---
+
+## 📁 tailwind.config.js
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin': 'spin 1s linear infinite',
+      }
+    },
   },
   plugins: [],
 }
